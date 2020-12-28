@@ -16,34 +16,18 @@
   },
   "main": "lib/XazabPlatformProtocol.js",
   "contributors": [
-    {
-      "name": "Ivan Shumkov",
-      "email": "ivan@shumkov.ru",
-      "url": "https://github.com/shumkov"
-    },
-    {
-      "name": "Djavid Gabibiyan",
-      "email": "djavid@dash.org",
-      "url": "https://github.com/jawid-h"
-    },
-    {
-      "name": "Anton Suprunchuk",
-      "email": "anton.suprunchuk@dash.org",
-      "url": "https://github.com/antouhou"
-    },
-    {
-      "name": "Konstantin Shuplenkov",
-      "email": "konstantin.shuplenkov@dash.org",
-      "url": "https://github.com/shuplenkov"
-    }
+    "Ivan Shumkov <ivan@shumkov.ru> (https://github.com/shumkov)",
+    "Djavid Gabibiyan <djavid@dash.org> (https://github.com/jawid-h)",
+    "Anton Suprunchuk <anton.suprunchuk@dash.org> (https://github.com/antouhou)",
+    "Konstantin Shuplenkov <konstantin.shuplenkov@dash.org> (https://github.com/shuplenkov)"
   ],
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@xazab/xazab-contract": "^1.0.0",
-    "@xazab/dpns-contract": "~0.3.0-dev.6",
-    "@xazab/drive-grpc": "~0.3.0",
+    "@xazab/dpns-contract": "~0.3.0-dev.5",
+    "@xazab/dapi-grpc": "~0.16.0",
     "babel-loader": "^8.1.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -78,5 +62,19 @@
     "lodash.get": "^4.4.2",
     "lodash.mergewith": "^4.6.2",
     "lodash.set": "^4.3.2"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xazab/js-dpp.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/xazab/js-dpp/issues"
+  },
+  "homepage": "https://github.com/xazab/js-dpp#readme"
 }
