@@ -1,6 +1,6 @@
 {
   "name": "@xazab/dpp",
-  "version": "0.17.0-dev.8",
+  "version": "0.17.0-dev.9",
   "description": "The JavaScript implementation of the Xazab Platform Protocol",
   "scripts": {
     "lint": "eslint .",
