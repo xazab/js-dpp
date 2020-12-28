@@ -1,6 +1,6 @@
 const rewiremock = require('rewiremock/node');
 
-const { PublicKey } = require('@dashevo/dashcore-lib');
+const { PublicKey } = require('@xazab/xazabcore-lib');
 
 const Identity = require('../../../lib/identity/Identity');
 const IdentityCreateTransition = require('../../../lib/identity/stateTransitions/identityCreateTransition/IdentityCreateTransition');

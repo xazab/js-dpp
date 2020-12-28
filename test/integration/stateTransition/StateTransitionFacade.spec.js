@@ -1,6 +1,6 @@
-const { PrivateKey } = require('@dashevo/dashcore-lib');
+const { PrivateKey } = require('@xazab/xazabcore-lib');
 
-const DashPlatformProtocol = require('../../../lib/DashPlatformProtocol');
+const XazabPlatformProtocol = require('../../../lib/XazabPlatformProtocol');
 
 const DataContractCreateTransition = require('../../../lib/dataContract/stateTransition/DataContractCreateTransition');
 
@@ -70,14 +70,14 @@ describe('StateTransitionFacade', () => {
       },
     });
 
-    dpp = new DashPlatformProtocol({
+    dpp = new XazabPlatformProtocol({
       stateRepository: stateRepositoryMock,
     });
   });
 
   describe('createFromObject', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.stateTransition.createFromObject(
@@ -92,7 +92,7 @@ describe('StateTransitionFacade', () => {
     });
 
     it('should skip checking for state repository if skipValidation is set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       await dpp.stateTransition.createFromObject(
         dataContractCreateTransition.toObject(),
@@ -113,7 +113,7 @@ describe('StateTransitionFacade', () => {
 
   describe('createFromBuffer', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.stateTransition.createFromBuffer(
@@ -128,7 +128,7 @@ describe('StateTransitionFacade', () => {
     });
 
     it('should skip checking for state repository if skipValidation is set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       await dpp.stateTransition.createFromBuffer(
         dataContractCreateTransition.toBuffer(),
@@ -219,7 +219,7 @@ describe('StateTransitionFacade', () => {
 
   describe('validateStructure', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.stateTransition.validateStructure(
@@ -245,7 +245,7 @@ describe('StateTransitionFacade', () => {
 
   describe('validateData', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.stateTransition.validateData(
@@ -271,7 +271,7 @@ describe('StateTransitionFacade', () => {
 
   describe('validateFee', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.stateTransition.validateFee(

@@ -1,4 +1,4 @@
-const DashPlatformProtocol = require('../../../lib/DashPlatformProtocol');
+const XazabPlatformProtocol = require('../../../lib/XazabPlatformProtocol');
 
 const DataContract = require('../../../lib/dataContract/DataContract');
 
@@ -16,7 +16,7 @@ describe('DataContractFacade', () => {
   let dataContractFactory;
 
   beforeEach(() => {
-    dpp = new DashPlatformProtocol();
+    dpp = new XazabPlatformProtocol();
 
     dataContract = getDataContractFixture();
 

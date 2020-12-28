@@ -1,4 +1,4 @@
-const createContactRequestDataTrigger = require('../../../../lib/dataTrigger/dashpayDataTriggers/createContactRequestDataTrigger');
+const createContactRequestDataTrigger = require('../../../../lib/dataTrigger/xazabpayDataTriggers/createContactRequestDataTrigger');
 
 const DataTriggerExecutionContext = require('../../../../lib/dataTrigger/DataTriggerExecutionContext');
 const DataTriggerExecutionResult = require('../../../../lib/dataTrigger/DataTriggerExecutionResult');
@@ -7,12 +7,12 @@ const DataTriggerConditionError = require('../../../../lib/errors/DataTriggerCon
 const createStateRepositoryMock = require('../../../../lib/test/mocks/createStateRepositoryMock');
 const getDocumentTransitionFixture = require('../../../../lib/test/fixtures/getDocumentTransitionsFixture');
 
-const getDashPayContractFixture = require('../../../../lib/test/fixtures/getDashPayContractFixture');
-const { getContactRequestDocumentFixture } = require('../../../../lib/test/fixtures/getDashPayDocumentFixture');
+const getXazabPayContractFixture = require('../../../../lib/test/fixtures/getXazabPayContractFixture');
+const { getContactRequestDocumentFixture } = require('../../../../lib/test/fixtures/getXazabPayDocumentFixture');
 
 describe('createContactRequestDataTrigger', () => {
   let context;
-  let dashPayIdentity;
+  let xazabPayIdentity;
   let stateRepositoryMock;
   let dataContract;
   let contactRequestDocument;
@@ -20,7 +20,7 @@ describe('createContactRequestDataTrigger', () => {
 
   beforeEach(function beforeEach() {
     contactRequestDocument = getContactRequestDocumentFixture();
-    dataContract = getDashPayContractFixture();
+    dataContract = getXazabPayContractFixture();
 
     [documentTransition] = getDocumentTransitionFixture({
       create: [contactRequestDocument],
@@ -37,7 +37,7 @@ describe('createContactRequestDataTrigger', () => {
       dataContract,
     );
 
-    dashPayIdentity = context.getOwnerId();
+    xazabPayIdentity = context.getOwnerId();
   });
 
   it('should successfully execute if document is valid', async () => {
@@ -48,7 +48,7 @@ describe('createContactRequestDataTrigger', () => {
     });
 
     const result = await createContactRequestDataTrigger(
-      documentTransition, context, dashPayIdentity,
+      documentTransition, context, xazabPayIdentity,
     );
 
     expect(result).to.be.an.instanceOf(DataTriggerExecutionResult);
@@ -58,7 +58,7 @@ describe('createContactRequestDataTrigger', () => {
 
   it('should successfully execute if document has no `coreHeightCreatedAt` field', async () => {
     const result = await createContactRequestDataTrigger(
-      documentTransition, context, dashPayIdentity,
+      documentTransition, context, xazabPayIdentity,
     );
 
     expect(result).to.be.an.instanceOf(DataTriggerExecutionResult);
@@ -74,7 +74,7 @@ describe('createContactRequestDataTrigger', () => {
     });
 
     const result = await createContactRequestDataTrigger(
-      documentTransition, context, dashPayIdentity,
+      documentTransition, context, xazabPayIdentity,
     );
 
     expect(result).to.be.an.instanceOf(DataTriggerExecutionResult);

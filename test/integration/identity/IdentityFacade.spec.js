@@ -1,6 +1,6 @@
-const { PublicKey } = require('@dashevo/dashcore-lib');
+const { PublicKey } = require('@xazab/xazabcore-lib');
 
-const DashPlatformProtocol = require('../../../lib/DashPlatformProtocol');
+const XazabPlatformProtocol = require('../../../lib/XazabPlatformProtocol');
 
 const Identity = require('../../../lib/identity/Identity');
 const IdentityCreateTransition = require('../../../lib/identity/stateTransitions/identityCreateTransition/IdentityCreateTransition');
@@ -26,7 +26,7 @@ describe('IdentityFacade', () => {
     stateRepositoryMock = createStateRepositoryMock(this.sinonSandbox);
     stateRepositoryMock.fetchTransaction.resolves(rawTransaction);
 
-    dpp = new DashPlatformProtocol({
+    dpp = new XazabPlatformProtocol({
       stateRepository: stateRepositoryMock,
     });
 

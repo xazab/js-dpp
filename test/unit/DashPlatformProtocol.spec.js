@@ -1,11 +1,11 @@
 const Ajv = require('ajv');
 
-const DashPlatformProtocol = require('../../lib/DashPlatformProtocol');
+const XazabPlatformProtocol = require('../../lib/XazabPlatformProtocol');
 const JsonSchemaValidator = require('../../lib/validation/JsonSchemaValidator');
 
 const createStateRepositoryMock = require('../../lib/test/mocks/createStateRepositoryMock');
 
-describe('DashPlatformProtocol', () => {
+describe('XazabPlatformProtocol', () => {
   let dpp;
   let stateRepositoryMock;
   let jsonSchemaValidatorMock;
@@ -16,7 +16,7 @@ describe('DashPlatformProtocol', () => {
     jsonSchemaValidatorMock = {};
     skipAssetLockProofSignatureVerification = true;
 
-    dpp = new DashPlatformProtocol({
+    dpp = new XazabPlatformProtocol({
       stateRepository: stateRepositoryMock,
       jsonSchemaValidator: jsonSchemaValidatorMock,
       identities: {
@@ -27,7 +27,7 @@ describe('DashPlatformProtocol', () => {
 
   describe('constructor', () => {
     it('should create JsonSchemaValidator if not passed in options', () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       const jsonSchemaValidator = dpp.getJsonSchemaValidator();
 

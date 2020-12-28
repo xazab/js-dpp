@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/dpp",
+  "name": "@xazab/dpp",
   "version": "0.17.0-dev.8",
-  "description": "The JavaScript implementation of the Dash Platform Protocol",
+  "description": "The JavaScript implementation of the Xazab Platform Protocol",
   "scripts": {
     "lint": "eslint .",
     "test": "npm run test:coverage && npm run test:browsers",
@@ -14,7 +14,7 @@
     "test:coverage": "NODE_ENV=test nyc --check-coverage --stmts=98 --branch=94 --funcs=95 --lines=98 mocha 'test/unit/**/*.spec.js' 'test/integration/**/*.spec.js'",
     "prepublishOnly": "npm run build"
   },
-  "main": "lib/DashPlatformProtocol.js",
+  "main": "lib/XazabPlatformProtocol.js",
   "contributors": [
     {
       "name": "Ivan Shumkov",
@@ -41,9 +41,9 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "@dashevo/dashpay-contract": "^1.0.0",
-    "@dashevo/dpns-contract": "~0.3.0-dev.6",
-    "@dashevo/drive-grpc": "~0.3.0",
+    "@xazab/xazab-contract": "^1.0.0",
+    "@xazab/dpns-contract": "~0.3.0-dev.6",
+    "@xazab/drive-grpc": "~0.3.0",
     "babel-loader": "^8.1.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^8.0.0",
-    "@dashevo/dashcore-lib": "~0.19.16",
+    "@xazab/xazabcore-lib": "~0.18.12",
     "ajv": "^6.12.0",
     "bs58": "^4.0.1",
     "cbor": "^5.0.1",

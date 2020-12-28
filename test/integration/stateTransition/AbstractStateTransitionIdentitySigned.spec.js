@@ -1,4 +1,4 @@
-const { PrivateKey } = require('@dashevo/dashcore-lib');
+const { PrivateKey } = require('@xazab/xazabcore-lib');
 
 const calculateStateTransitionFee = require('../../../lib/stateTransition/calculateStateTransitionFee');
 

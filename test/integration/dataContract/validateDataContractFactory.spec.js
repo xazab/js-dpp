@@ -1101,7 +1101,7 @@ describe('validateDataContractFactory', () => {
       });
 
       describe('contentMediaType', () => {
-        describe('application/x.dash.dpp.identifier', () => {
+        describe('application/x.xazab.dpp.identifier', () => {
           it('should be used with byte array only', async () => {
             delete rawDataContract.documents.withByteArrays.properties.identifierField.byteArray;
 

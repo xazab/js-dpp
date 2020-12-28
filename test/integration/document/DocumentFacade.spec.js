@@ -1,5 +1,5 @@
 const generateRandomIdentifier = require('../../../lib/test/utils/generateRandomIdentifier');
-const DashPlatformProtocol = require('../../../lib/DashPlatformProtocol');
+const XazabPlatformProtocol = require('../../../lib/XazabPlatformProtocol');
 
 const Document = require('../../../lib/document/Document');
 const DocumentsBatchTransition = require('../../../lib/document/stateTransition/DocumentsBatchTransition');
@@ -31,7 +31,7 @@ describe('DocumentFacade', () => {
 
     stateRepositoryMock.fetchDataContract.resolves(dataContract);
 
-    dpp = new DashPlatformProtocol({
+    dpp = new XazabPlatformProtocol({
       stateRepository: stateRepositoryMock,
     });
 
@@ -57,7 +57,7 @@ describe('DocumentFacade', () => {
 
   describe('createFromObject', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.document.createFromObject(document.toObject());
@@ -80,7 +80,7 @@ describe('DocumentFacade', () => {
 
   describe('createFromBuffer', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.document.createFromBuffer(document.toObject());
@@ -116,7 +116,7 @@ describe('DocumentFacade', () => {
 
   describe('validate', () => {
     it('should throw MissingOption if stateRepository is not set', async () => {
-      dpp = new DashPlatformProtocol();
+      dpp = new XazabPlatformProtocol();
 
       try {
         await dpp.document.validate(document);

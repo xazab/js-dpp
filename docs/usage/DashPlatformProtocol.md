@@ -1,6 +1,6 @@
-## new DashPlatformProtocol(options)
+## new XazabPlatformProtocol(options)
 
-**Description**: Instantiate DashPlatformProtocol.
+**Description**: Instantiate XazabPlatformProtocol.
 
 **Parameters**:
 
@@ -10,7 +10,7 @@
 | **options.stateRepository**                               | StateRepository    | no       |                                                        |
 | **options.jsonSchemaValidator**                           | JsonSchemaValidator| no       |                                                        |
 
-**Returns**: {DashPlatformProtocol}
+**Returns**: {XazabPlatformProtocol}
 
 **Notes**: DPP will provide multiples facades: 
 - [dpp.dataContract](/usage/dataContract)

@@ -53,7 +53,7 @@ describe('validateInstantAssetLockProofStructureFactory', () => {
     validateInstantAssetLockProofStructureFactory = rewiremock.proxy(
       '../../../../../../../lib/identity/stateTransitions/assetLock/proof/instant/validateInstantAssetLockProofStructureFactory',
       {
-        '../../../../../../../node_modules/@dashevo/dashcore-lib': {
+        '../../../../../../../node_modules/@xazab/xazabcore-lib': {
           InstantLock: InstantLockClassMock,
         },
       },
